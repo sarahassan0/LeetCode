@@ -7,11 +7,33 @@ class Solution:
         longest = 0
         
         for num in num_set:
-            if num - 1 not in num_set:
-                current_length = 0                
-                while num + current_length  in num_set:
-                    current_length += 1
+            if (num - 1) not in num_set:
+                length = 0                
+                while num + length  in num_set:
+                    length += 1
                 
-                longest = max(longest, current_length)
+                longest = max(longest, length)
         
         return longest
+
+
+
+# -------------------------- Another solution using sorting---------
+
+#         if not nums:
+#             return 0
+
+#         nums = sorted(nums)
+#         counter, longest = 1, 1
+    
+#         for i in range(len(nums)):
+#             if i < len(nums)-1:
+#                 if nums[i+1] - nums[i] == 1:
+#                     counter += 1
+#                     continue
+#                 elif nums[i+1] - nums[i] == 0: continue
+    
+#             longest = max(counter, longest)
+#             counter = 1
+
+#         return longest 
