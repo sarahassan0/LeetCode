@@ -6,16 +6,6 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        # tmp = head
-        # nodes = []
-    
-        # while tmp:
-        #     if tmp in nodes:
-        #         return True
-        #     nodes.append(tmp)
-        #     tmp = tmp.next
-        
-        # return False
 
 #---------------- Solution using slow & fast pointers --------
 
@@ -29,3 +19,16 @@ class Solution:
                 return True
 
         return False
+
+#------------------ Solution using exter space --------
+
+        # tmp = head
+        # nodes = []
+    
+        # while tmp:
+        #     if tmp in nodes:
+        #         return True
+        #     nodes.append(tmp)
+        #     tmp = tmp.next
+        
+        # return False
