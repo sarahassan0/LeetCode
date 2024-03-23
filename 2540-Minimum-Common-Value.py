@@ -5,7 +5,7 @@ class Solution:
         nums2_S = set(nums2)
         common = nums1_S.intersection(nums2_S)
         return min(common) if common else -1
-        
+
 
 #---------------------- Another Solution --------
 
