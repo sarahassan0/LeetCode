@@ -13,14 +13,15 @@ class Solution:
                 flowerbed[0] = 1
                 valid += 1
                 continue
-            if flowerbed[i]==0:
-                if flowerbed[i+1] == 0 :
-                    if flowerbed[i-1]== 0:
-                        flowerbed[i] = 1
-                
-                        valid += 1 
-                    elif i+1 == len(flowerbed) - 1 :
-                        flowerbed[i+1] = 1
-                        valid += 1
+            if flowerbed[i] == flowerbed[i+1] == 0:
+
+                if flowerbed[i-1]== 0:
+                    flowerbed[i] = 1
+                    valid += 1 
+
+                elif i+1 == len(flowerbed) - 1 :
+                    flowerbed[i+1] = 1
+                    valid += 1
+
         print(flowerbed)
         return valid >= n
