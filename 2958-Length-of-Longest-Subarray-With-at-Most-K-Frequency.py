@@ -8,7 +8,7 @@ class Solution:
 
             freq[nums[right]] += 1
 
-            while freq[nums[right]] > k and left <= right:
+            while freq[nums[right]] > k :
                 freq[nums[left]] -= 1
                 left +=1
 
