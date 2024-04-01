@@ -12,7 +12,6 @@ class Solution:
         for c in text:
             if c in freq:
                 freq[c] += 1
-        print(freq)
         
         freq['l'] = freq['l'] // 2
         freq['o'] =  freq['o'] // 2
