@@ -2,7 +2,6 @@ class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         count = 0
         valid = ""
-        closed = 0
 
         for c in s:
             if c == ')':
