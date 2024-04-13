@@ -6,7 +6,7 @@ class Solution:
         rows = len(matrix)
         cols = len(matrix[0])
         maxArea = 0
-        histogram = [0] * len(matrix[0]) 
+        histogram = [0] * (cols + 1)
         
         for row in matrix:
             for col in range(cols):
@@ -18,7 +18,7 @@ class Solution:
             print(histogram)
             
             stack = []
-            for i, h in enumerate(histogram+[0]):  
+            for i, h in enumerate(histogram):  
                 start = i
                 while stack and h < stack[-1][1]:
                     index, height = stack.pop()
