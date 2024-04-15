@@ -5,15 +5,16 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def sumNumbers(self, root: Optional[TreeNode], path_sum=0) -> int:
+    def sumNumbers(self, root: Optional[TreeNode], path_sum="") -> int:
     
         if not root:
             return 0
 
-        path_sum = path_sum * 10 + root.val
-
+        path_sum = path_sum + str(root.val)
+    
         if not root.left and not root.right:
-            return path_sum
+            return int(path_sum)
 
-        return self.sumNumbers(root.left, path_sum) + self.sumNumbers(root.right, path_sum)
+
+        return self.sumNumbers(root.left,path_sum) + self.sumNumbers(root.right,path_sum)
     
