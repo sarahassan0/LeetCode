@@ -7,9 +7,9 @@
 class Solution:
     def addOneRow(self, root: Optional[TreeNode], val: int, depth: int, cur_depth=1) -> Optional[TreeNode]:
 
-        
+
         if not root:
-            return root
+            return None
 
         if depth == 1:
             tree = TreeNode(val=val, left=root)
