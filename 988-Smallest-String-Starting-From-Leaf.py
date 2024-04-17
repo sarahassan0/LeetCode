@@ -8,19 +8,15 @@ class Solution:
     def smallestFromLeaf(self, root: Optional[TreeNode],path="") -> str:
      
         if not root:
-            return ""
+            return '~' # '~' represents a large value string in lexicographical comparison
         
         path += chr(ord('a') + root.val)
         
-        if not root.left and not root.right:
+        if not root.left and not root.right :
             return path[::-1] 
         
-        left_path = self.smallestFromLeaf(root.left, path)
-        right_path= self.smallestFromLeaf(root.right, path)
-        print(left_path,right_path)
-        if left_path and right_path:
-            return min(left_path, right_path)
-        elif left_path:
-            return left_path
-        else:
-            return right_path
+        left_path = self.smallestFromLeaf(root.left, path) 
+        right_path= self.smallestFromLeaf(root.right, path) 
+
+        return min(left_path, right_path)
+    
