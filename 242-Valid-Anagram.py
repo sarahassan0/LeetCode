@@ -13,11 +13,11 @@ class Solution:
             
             set_T[i] += 1
 
-
         return set_S == set_T
         
-###################################################
+#---------------------------- Another Solutions -----------
+
         # return sorted(s) == sorted(t)
-##############################################
-        return Counter(s) == Counter(t)
+#-----------------------------------------------------
+        # return Counter(s) == Counter(t)
         
