@@ -9,14 +9,16 @@ class Solution:
 
 #---------------- Solution using slow & fast pointers --------
 
-        slow = head
-        fast = head
+        slow, fast = head, head
+
         while fast and fast.next:
+
             fast = fast.next.next
-            slow = slow.next
 
             if slow == fast:
                 return True
+
+            slow = slow.next
 
         return False
 
@@ -32,3 +34,4 @@ class Solution:
         #     tmp = tmp.next
         
         # return False
+
