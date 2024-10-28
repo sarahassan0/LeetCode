@@ -7,19 +7,31 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
 
-        if not head or not head.next:
-            return False
+#---------------- Solution using slow & fast pointers --------
 
         slow, fast = head, head
 
         while fast and fast.next:
+
             fast = fast.next.next
-            slow = slow.next
-            
-            if fast == slow :
+
+            if slow == fast:
                 return True
 
-        
+            slow = slow.next
+
         return False
 
+#------------------ Solution using exter space --------
+
+        # tmp = head
+        # nodes = []
+    
+        # while tmp:
+        #     if tmp in nodes:
+        #         return True
+        #     nodes.append(tmp)
+        #     tmp = tmp.next
         
+        # return False
+
