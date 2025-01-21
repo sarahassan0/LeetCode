@@ -4,17 +4,13 @@ class Solution:
             return False
 
         set_S, set_T = defaultdict(int), defaultdict(int)
-        
-        for i in s:
-            
-            set_S[i] += 1
 
-        for i in t:
-            
-            set_T[i] += 1
+        for i in range(len(s)):
+            set_S[s[i]] += 1
+            set_T[t[i]] += 1
 
         return set_S == set_T
-        
+         
 #---------------------------- Another Solutions -----------
 
         # return sorted(s) == sorted(t)
