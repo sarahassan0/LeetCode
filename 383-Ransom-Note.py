@@ -1,8 +1,22 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
 
-        s1 = Counter(ransomNote)
-        s2 = Counter(magazine)
+        if len(magazine) < len(ransomNote):
+            return False
 
-        return s1 & s2 == s1
+        noteHash, magazineHash = defaultdict(int), defaultdict(int)
+
+        for i in range(len(magazine)):
+            magazineHash[magazine[i]] += 1
+
+            if i < len(ransomNote):
+                noteHash[ransomNote[i]] += 1
+        
+
+        for c in noteHash:
+            if noteHash[c] > magazineHash[c]:
+                return False
+
+        return True
+
         
