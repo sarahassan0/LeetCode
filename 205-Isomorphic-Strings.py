@@ -7,7 +7,7 @@ class Solution:
         charHash = {} 
         for i in range(len(s)):
             char = s[i]
-            if char in charHash and  charHash[char] != t[i]:
+            if char in charHash and charHash[char] != t[i]:
                 return False
             charHash[char] = t[i]
      
