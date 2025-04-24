@@ -1,5 +1,6 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
+
         l, r = 0, len(nums) - 1
 
         while l <= r:
@@ -14,8 +15,8 @@ class Solution:
 
 
 #------------ linear search , O(n) ------
-        # for i in range(len(nums)):
+        # n = len(nums)
+        # for i in range(n):
         #     if target <= nums[i]:
         #         return i
-        # return len(nums)
-        
+        # return n
