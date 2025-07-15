@@ -1,5 +1,9 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+
+        # return len(set(nums)) != len(nums)
+
+    #----------------------------------
         # hash set solution => time O(n), space O(n)
         # unique = set()
 
@@ -11,8 +15,8 @@ class Solution:
 
         # return False
 
-        #------------------------------
-        # sorting solution => time O(n log n), space O(1) in python, because it's in place sorting
+#------------------------------
+        # sorting solution => time O(n log n), space O(1) in python, because    it's in place sorting
         
         nums.sort()
 
@@ -20,3 +24,9 @@ class Solution:
             if nums[i] == nums[i-1]:
                 return True
         return False
+
+
+
+
+        
+        
