@@ -13,14 +13,13 @@ class Solution:
 #------------------------------------
 
         # count  = defaultdict(int)
-        # candidate, maxCount = 0, 0
+        # maxi = nums[0]
 
         # for num in nums:
         #     count[num] += 1
-        #     if count[num] > maxCount:
-        #         candidate = num
-        #         maxCount = count[num]
-        # return candidate
+        #     if count[num] > count[maxi]:
+        #         maxi = num
+        # return maxi
 
 
 #---------------------------------
@@ -40,4 +39,3 @@ class Solution:
 #------------------------------------
         # nums.sort()
         # return nums[len(nums) // 2]
-
