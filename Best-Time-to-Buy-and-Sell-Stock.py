@@ -3,14 +3,15 @@ class Solution:
 
         less_price, max_profit = prices[0], 0
 
-        for today_price in prices:
-            if today_price < less_price:
-                less_price = today_price
+        for price in prices:
+            if price < less_price:
+                less_price = price
             else:
-                today_profit = today_price - less_price
-                max_profit = max(max_profit , today_profit)
-
+                profit = price - less_price 
+                max_profit = max(profit, max_profit)
         return max_profit
+
+
 # ---------------- Solution using two pointers technique ----
 
         # l, r = 0, 1
