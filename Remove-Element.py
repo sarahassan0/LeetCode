@@ -1,24 +1,24 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        idx = 0
 
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[idx] = nums[i]
-                idx += 1
+        writing_idx = 0
+        for n in nums:
+            if n != val:
+                nums[writing_idx] = n
+                writing_idx += 1
+        return writing_idx
 
-        return idx
     #-------------------------------
 
-        # i, n = 0, len(nums) 
+        # i, n = 0, len(nums)-1
 
-        # while i < n:
+        # while i <= n:
         #     if nums[i] == val:
-        #         n -= 1
         #         nums[i] = nums[n]
+        #         n -= 1
         #     else:
         #         i += 1
-        # return n
+        # return i 
 #-----------------------------------------------------
 
         # tmp = []
@@ -31,6 +31,8 @@ class Solution:
 
         # return len(tmp)
 
+        
 
 
 
+       
