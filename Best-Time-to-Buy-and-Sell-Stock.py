@@ -8,7 +8,7 @@ class Solution:
                 less_price = price
             else:
                 profit = price - less_price 
-                max_profit = max(profit, max_profit)
+                max_profit = max(max_profit, profit )
         return max_profit
 
 
@@ -26,6 +26,7 @@ class Solution:
         #     r += 1
         # return max_profit
 
+        
 #-------------------- Time limit in case 200 -----------
 
         # maxi = 0
@@ -38,4 +39,15 @@ class Solution:
         # return 0 if maxi <= 0 else maxi
 
 
-        
+
+
+
+
+
+
+
+       
+
+
+
+
