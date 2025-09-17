@@ -5,22 +5,32 @@ class Solution:
 
         while l <= r:
             mid = l + ((r - l) // 2)
-            if mid ** 2 < x :
+            if x > mid ** 2:
                 l = mid + 1
-            elif  mid ** 2 > x:
+            elif x < mid ** 2:
                 r = mid - 1
             else:
                 return mid
-        return r
-
+        return r  # since i want the rounded down to the nearest int will retutn r because its  lowering with each loop
 
 
 #------------- brute force, O(sqrt(n)) --------
-        # if x * x == x:
+        # if x**2 == x:
         #     return x
 
-        # for i in range(x + 1):  
-        #     if i * i > x:
+        # for i in range(x+1):  
+        #     if i **2 > x:
         #         return i - 1
+
+
+
+
                         
            
+
+
+
+
+
+
+
