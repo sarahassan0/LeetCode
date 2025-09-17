@@ -1,22 +1,32 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
 
-        l, r = 0, len(nums) - 1
-
-        while l <= r:
-            mid = l + ((r - l) // 2)
-            if nums[mid] == target:
+        low, high = 0, len(nums) -1
+        
+        while low <= high:
+            mid = low +(high - low) // 2
+            if target == nums[mid]:
                 return mid
-            elif nums[mid] > target:
-                r = mid - 1
+            elif target > nums[mid]:
+                low = mid + 1
             else:
-                l = mid + 1
-        return l
+                high = mid - 1
 
+        return low
+    
 
 #------------ linear search , O(n) ------
         # n = len(nums)
         # for i in range(n):
-        #     if target <= nums[i]:
+        #     if nums[i] >= target:
         #         return i
-        # return n
+        # return n  
+
+
+
+
+
+
+
+
+         
