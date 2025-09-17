@@ -30,5 +30,3 @@ class Solution:
 #         else:
 #             return  self.binarySearch(low, mid - 1, nums, target)
 
-
-
