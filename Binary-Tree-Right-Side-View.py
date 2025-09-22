@@ -26,6 +26,7 @@ class Solution:
                     queue.append(curr.left)
                 if curr.right:
                     queue.append(curr.right)
+
         return result
 
 
