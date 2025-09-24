@@ -14,11 +14,10 @@ class Solution:
         while queue:
             level_size = len(queue)
             _, leftPos = queue[0]
+            _, rightPos = queue[level_size-1]
 
             for i in range(level_size):
                 curr, pos = queue.popleft()
-                if i == level_size - 1:
-                    rightPos = pos
                 
                 if curr.left:
                     queue.append((curr.left, 2 * pos))
@@ -26,6 +25,7 @@ class Solution:
                     queue.append((curr.right, 2 * pos + 1))
 
             max_ = max(max_, (rightPos - leftPos + 1))
+
         return max_
 
         
